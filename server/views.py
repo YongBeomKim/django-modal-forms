@@ -19,7 +19,9 @@ class CustomLoginView(BSModalLoginView):
     success_url = reverse_lazy('books:index')
 
 # 로그아웃 함수를 정의합니다
-from django.contrib.auth import logout
+from django.contrib import auth, messages
+
 def logout_view(request):
-    logout(request)
+    auth.logout(request)
+    messages.warning(request, "로그아웃 되었습니다")
     return redirect('books:index')
