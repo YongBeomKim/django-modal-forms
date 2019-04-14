@@ -2,26 +2,28 @@
 Django Bootstrap Modal Forms
 ============================
 
-A Django plugin for creating AJAX driven forms in Bootstrap modal.
+[Module Fork Github](https://github.com/trco/django-bootstrap-modal-forms) A Django plugin for creating AJAX driven forms in Bootstrap modal.
 
 Installation
 ============
 
-1. Install ``django-bootstrap-modal-forms``::
+1. Install ``django-bootstrap-modal-forms`` & ``django-widget-tweaks``::
 
+    $ pip install django-widget-tweaks
     $ pip install django-bootstrap-modal-forms
 
 2. Add ``bootstrap_modal_forms`` to your INSTALLED_APPS in settings.py::
 
     INSTALLED_APPS = [
         ...
+        'widget_tweaks',
         'bootstrap_modal_forms',
         ...
     ]
 
-3. Include Bootstrap, jQuery and ``jquery.bootstrap.modal.forms.js`` on every page where you would like to set up the AJAX driven Django forms in Bootstrap modal.
+3. Include Bootstrap (v4.1.3), jQuery (v3.2.1) and ``jquery.bootstrap.modal.forms.js`` on every page where you would like to set up the AJAX driven Django forms in Bootstrap modal.
 
-IMPORTANT: Adjust Bootstrap and jQuery file paths to match yours, but include ``jquery.bootstrap.modal.forms.js`` exactly as in code bellow.
+IMPORTANT: Adjust Bootstrap (v4.1.3) and jQuery (v3.2.1) file paths to match yours, but include ``jquery.bootstrap.modal.forms.js`` exactly as in code bellow.
 
 .. code-block:: html+django
 
