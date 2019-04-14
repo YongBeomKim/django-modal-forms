@@ -1,0 +1,15 @@
+.invalid {
+    color: #dc3545;
+    font-size: 80%;
+  }
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.footer {
+    margin: auto 0 0;
+    height: 56px;
+}

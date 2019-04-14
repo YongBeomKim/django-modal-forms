@@ -1,0 +1,35 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+    {% block stylesheets %}
+      <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+      <link rel="stylesheet" href="{% static 'fonts/font-awesome-4.7.0/css/font-awesome.min.css' %}">
+      <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    {% endblock stylesheets %}
+  </head>
+
+  <body>
+    {% include "_header.html" %}
+
+    {% block content %}
+    {% endblock content %}
+
+    {% include "_footer.html" %}
+
+    <!-- JavaScript -->
+    {% block scripts %}
+      <script src="{% static 'js/jquery-3.2.1.min.js' %}"></script>
+      <script src="{% static 'js/popper.min.js' %}"></script>
+      <script src="{% static 'js/bootstrap.min.js' %}"></script>
+      <script src="{% static 'js/jquery.bootstrap.modal.forms.js' %}"></script>
+    {% endblock scripts %}
+
+    {% block extrascripts %}
+    {% endblock extrascripts %}
+
+  </body>
+</html>
